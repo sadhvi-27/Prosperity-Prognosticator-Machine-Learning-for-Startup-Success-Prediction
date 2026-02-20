@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Success Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Startup Success Prediction</h2>
+
+    <form action="/predict" method="post">
+
+        <label>Age at First Funding Year</label>
+        <input type="number" step="any" name="age_first_funding_year" required>
+
+        <label>Age at Last Funding Year</label>
+        <input type="number" step="any" name="age_last_funding_year" required>
+
+        <label>Age at First Milestone Year</label>
+        <input type="number" step="any" name="age_first_milestone_year" required>
+
+        <label>Age at Last Milestone Year</label>
+        <input type="number" step="any" name="age_last_milestone_year" required>
+
+        <label>Number of Relationships</label>
+        <input type="number" name="relationships" required>
+
+        <label>Number of Funding Rounds</label>
+        <input type="number" name="funding_rounds" required>
+
+        <label>Total Funding (USD)</label>
+        <input type="number" step="any" name="funding_total_usd" required>
+
+        <label>Number of Milestones</label>
+        <input type="number" name="milestones" required>
+
+        <label>Average Participants</label>
+        <input type="number" name="avg_participants" required>
+
+        <label>Is Top 500 (1 = Yes, 0 = No)</label>
+        <input type="number" min="0" max="1" name="is_top500" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+</div>
+
+</body>
+</html>
